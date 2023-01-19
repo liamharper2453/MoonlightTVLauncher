@@ -21,7 +21,7 @@ https://user-images.githubusercontent.com/25060863/213544353-267e855c-49ea-49cf-
  - A rooted WebOS TV with the Moonlight TV app installed
  - Windows
  - A game controller that can connect to your PC
- - A GameStream server on your PC, for example: Nvidia GameStream
+ - A GameStream host on your PC, for example: Nvidia GameStream
  - Python 3
  - [pywebostv](https://pypi.org/project/pywebostv/)
  - [ares-cli](https://www.npmjs.com/package/@webosose/ares-cli)
