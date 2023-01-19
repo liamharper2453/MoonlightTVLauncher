@@ -10,11 +10,10 @@ This application allows you to perform the following by simply just turning on y
  - Navigate the Moonlight TV app to select a game/launcher.
  - Start the stream!
 
- 
 
-https://user-images.githubusercontent.com/25060863/213520764-0ac38e32-9cea-4e16-b58c-9e4d6cf6476a.mp4
+https://user-images.githubusercontent.com/25060863/213544353-267e855c-49ea-49cf-9d7a-3840a4e5d9e5.mp4
 
-***This is not at all affiliated with Moonlight nor Moonlight TV, this is just a fun side project!***
+**This is not at all affiliated with Moonlight nor Moonlight TV, this is just a fun side project!**
 
 # How to use
 
@@ -23,6 +22,7 @@ https://user-images.githubusercontent.com/25060863/213520764-0ac38e32-9cea-4e16-
  - Windows
  - A GameStream server on your PC, for example: Nvidia GameStream
  - Python 3
+ - [pywebostv](https://pypi.org/project/pywebostv/)
  - [ares-cli](https://www.npmjs.com/package/@webosose/ares-cli)
 
 ## How do I run it?
@@ -71,7 +71,7 @@ If your PC is in hibernate/sleep, what you can do is go into your Windows power 
 
 ![mmc_rcCqr10yOl](https://user-images.githubusercontent.com/25060863/213506222-58df13db-7979-4e3b-8f84-fa0b7470bf77.gif)
 
-If you do this it means you can start your Moonlight session without any remotes other than your game controller and you don't have to even go and turn your PC on!
+If you combine this with Wake-on-Lan for your TV It means you can start your Moonlight session without any remotes other than your game controller and you don't have to even go and turn your PC on!
 
 # Credits
  - [ares-cli](https://github.com/webosose/ares-cli) for providing the wrapper for the WebOS api's
