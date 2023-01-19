@@ -87,13 +87,13 @@ void EndSession()
 {
     RunCommand("/c ares-launch -d tv --close com.limelight.webos");
     RunCommand("/c explorer.exe");
-    RunCommand(@"/c " + Environment.CurrentDirectory + @"\Dependencies\ChangeScreenResolution.exe /w=" + configuration.OriginalResolutionX + " /h=" + configuration.OriginalResolutionY + " /f=" + configuration.OriginalResolutionHz + " /d=0");
+    RunCommand("/c \"" + Environment.CurrentDirectory + "\"" + @"\Dependencies\ChangeScreenResolution.exe /w=" + configuration.OriginalResolutionX + " /h=" + configuration.OriginalResolutionY + " /f=" + configuration.OriginalResolutionHz + " /d=0");
     RunCommand("/c taskkill /F /IM " + configuration.PcApplicationUsedForStreaming);
     RunCommand("/c taskkill /IM " + configuration.PcApplicationBeingLaunched);
     moonlightTvStreamActive = false;
     //Wait for explorer to start up again before switching back to main desktop
     Thread.Sleep(5000);
-    RunCommand("/c " + Environment.CurrentDirectory + @"\Dependencies\nircmdc sendkeypress rwin+ctrl+left");
+    RunCommand("/c \"" + Environment.CurrentDirectory + "\"" + @"\Dependencies\nircmdc sendkeypress rwin+ctrl+left");
 }
 
 bool StartStream()
@@ -105,15 +105,15 @@ bool StartStream()
             WakeOnLan.Wake(configuration.TvMacAddress);
         }
 
-        RunCommand("/c" + Environment.CurrentDirectory + @"\Dependencies\nircmdc sendkeypress rwin+ctrl+right");
+        RunCommand("/c \"" + Environment.CurrentDirectory + "\"" + @"\Dependencies\nircmdc sendkeypress rwin+ctrl+right");
         //Wait for desktop to switch BEFORE killing explorer
         Thread.Sleep(1000);
         RunCommand("/c taskkill /F /IM explorer.exe");
-        RunCommand(@"/c " + Environment.CurrentDirectory + @"\Dependencies\ChangeScreenResolution.exe /w=" + configuration.StreamResolutionX + " /h=" + configuration.StreamResolutionY + " /f=" + configuration.StreamResolutionHz + " /d=0");
+        RunCommand("/c \"" + Environment.CurrentDirectory + "\"" + @"\Dependencies\ChangeScreenResolution.exe /w=" + configuration.StreamResolutionX + " /h=" + configuration.StreamResolutionY + " /f=" + configuration.StreamResolutionHz + " /d=0");
         RunCommand("/c ares-launch -d tv com.limelight.webos");
         //Give TV some time to open the MoonlightTV app before attempting TV input
         Thread.Sleep(3000);
-        RunCommand("/c py " + Environment.CurrentDirectory + @"\Scripts\MoonlightTVAutoConnect.py" + " " + configuration.TvIpAddress + " " + configuration.TvClientKey + " " + configuration.TvMoonlightGameIndex);
+        RunCommand("/c py \"" + Environment.CurrentDirectory + "\"" + @"\Scripts\MoonlightTVAutoConnect.py" + " " + configuration.TvIpAddress + " " + configuration.TvClientKey + " " + configuration.TvMoonlightGameIndex);
     }
 
     Console.WriteLine("Streaming application started (" + configuration.PcApplicationUsedForStreaming + "). Output should be appearing on your TV now.");
