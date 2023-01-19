@@ -22,6 +22,7 @@ https://user-images.githubusercontent.com/25060863/213544353-267e855c-49ea-49cf-
  - Windows
  - A GameStream server on your PC, for example: Nvidia GameStream
  - Python 3
+ - [pywebostv](https://pypi.org/project/pywebostv/)
  - [ares-cli](https://www.npmjs.com/package/@webosose/ares-cli)
 
 ## How do I run it?
