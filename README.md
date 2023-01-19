@@ -14,7 +14,7 @@ This application allows you to perform the following by simply just turning on y
 
 https://user-images.githubusercontent.com/25060863/213520764-0ac38e32-9cea-4e16-b58c-9e4d6cf6476a.mp4
 
-***This is not at all affiliated with Moonlight nor Moonlight TV, this is just a fun side project!***
+**This is not at all affiliated with Moonlight nor Moonlight TV, this is just a fun side project!**
 
 # How to use
 
