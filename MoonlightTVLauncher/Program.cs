@@ -8,12 +8,26 @@ var periodicTimer = new PeriodicTimer(TimeSpan.FromSeconds(1));
 var moonlightTvStreamActive = false;
 var waitingToWakeFromSleep = false;
 
-Console.WriteLine("Application started successfully.");
+Console.WriteLine("Hello! The application has started successfully. I am now waiting for a controller.\n");
+Console.WriteLine("Once the controller is detected, I will try to connect to the TV with IP address " + configuration.TvIpAddress + " to start the Moonlight session.\n");
+Console.WriteLine("The executable I am going to look for on this PC to know the stream has started is " + configuration.PcApplicationUsedForStreaming + ".\n");
+Console.WriteLine("The application I aim to launch when the stream starts is " + configuration.PcApplicationBeingLaunched + ".\n");
+Console.WriteLine("When the stream starts I will set the resolution to " + configuration.StreamResolutionX + "x" + configuration.StreamResolutionY + "@" + configuration.StreamResolutionHz + ".\n");
+Console.WriteLine("When the stream ends I will return the resolution to " + configuration.OriginalResolutionX + "x" + configuration.OriginalResolutionY + "@" + configuration.OriginalResolutionHz + ".\n");
 
 //Create event to monitor for waking up of PC
 SystemEvents.PowerModeChanged += OnPowerChange;
 
-await WaitForConnection();
+try
+{
+    await WaitForConnection();
+} catch (Exception ex)
+{
+    Console.WriteLine("I have encountered an error: " + ex.Message.ToString());
+    Console.WriteLine("The application has now stopped. Please close and try again.");
+    Console.Read();
+    Environment.Exit(0);
+}
 
 async Task WaitForConnection()
 {
@@ -30,7 +44,7 @@ async Task WaitForConnection()
         {
             if (moonlightTvStreamActive)
             {
-                //Continually hide cursor in top-left
+                //Continually hide cursor in bottom left of screen. Many applications like to put it in the middle of your screen when they open!
                 DesktopUtilities.SetCursorPos(-1, 9999);
                 continue;
             }
@@ -41,7 +55,7 @@ async Task WaitForConnection()
 
             if (!startStreamTask.Wait(TimeSpan.FromSeconds(120)))
             {
-                Console.WriteLine("Could not start stream. Please check your settings parameters and try again.");
+                Console.WriteLine("Could not start stream. Please check your settings parameters and your network and try again.");
                 EndSession();
                 Console.Read();
                 Environment.Exit(0);
@@ -102,7 +116,7 @@ bool StartStream()
         RunCommand("/c py " + Environment.CurrentDirectory + @"\Scripts\MoonlightTVAutoConnect.py" + " " + configuration.TvIpAddress + " " + configuration.TvClientKey + " " + configuration.TvMoonlightGameIndex);
     }
 
-    Console.WriteLine("Streaming application started (" + configuration.PcApplicationUsedForStreaming + ") Output should be appearing on your TV now.");
+    Console.WriteLine("Streaming application started (" + configuration.PcApplicationUsedForStreaming + "). Output should be appearing on your TV now.");
 
     return true;
 }
