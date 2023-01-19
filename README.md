@@ -1,15 +1,11 @@
-
-
-
 # MoonlightTVLauncher
 
 This application allows you to perform the following by simply just turning on your game controller:
 
- - Conditionally turn on your PC and TV (read FAQ below).
+ - Turn on your PC and TV (read FAQ below).
  - Control a WebOS TV and automatically open the Moonlight TV app.
  - Navigate the Moonlight TV app to select a game/launcher.
  - Start the stream!
-
 
 https://user-images.githubusercontent.com/25060863/213544353-267e855c-49ea-49cf-9d7a-3840a4e5d9e5.mp4
 
@@ -19,12 +15,12 @@ https://user-images.githubusercontent.com/25060863/213544353-267e855c-49ea-49cf-
 
 ## What do I need to use this? 
  - A rooted WebOS TV with the Moonlight TV app installed
- - Windows
  - A game controller that can connect to your PC
  - A GameStream host on your PC, for example: Nvidia GameStream
  - Python 3
  - [pywebostv](https://pypi.org/project/pywebostv/)
  - [ares-cli](https://www.npmjs.com/package/@webosose/ares-cli)
+ - Windows
 
 ## How do I run it?
 You need to first populate the appsettings.json file with values relevant to your setup.
@@ -76,7 +72,7 @@ If you combine this with Wake-on-Lan for your TV It means you can start your Moo
 
 # Credits
  - [ares-cli](https://github.com/webosose/ares-cli) for providing the wrapper for the WebOS api's
- -   [ChangeScreenResolution](https://tools.taubenkorb.at/change-screen-resolution/) for creating the tool to be able to programmatically change resolutions
- -  [Moonlight TV](https://github.com/mariotaku/moonlight-tv) for creating the GameStream client
-  - [NirCmd](https://www.nirsoft.net/utils/nircmd2.html) for creating the tool to programmatically send key presses
+ - [ChangeScreenResolution](https://tools.taubenkorb.at/change-screen-resolution/) for creating the tool to be able to programmatically change resolutions
+ - [Moonlight TV](https://github.com/mariotaku/moonlight-tv) for creating the GameStream client
+ - [NirCmd](https://www.nirsoft.net/utils/nircmd2.html) for creating the tool to programmatically send key presses
  - [PyWebOSTV](https://github.com/supersaiyanmode/PyWebOSTV) for creating the tool to pass input remotely to the TV
