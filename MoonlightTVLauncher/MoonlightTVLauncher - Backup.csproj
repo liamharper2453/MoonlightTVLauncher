@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="XInputDotNetPure">
+      <HintPath>..\..\..\..\Downloads\XInputDotNet-x64-v2015.03-1\XInputDotNetPure.dll</HintPath>
+    </Reference>
+	 <Reference Include="XInputInterface">
+      <HintPath>..\..\..\..\Downloads\XInputDotNet-x64-v2015.03-1\XInputInterface.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
