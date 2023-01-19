@@ -5,8 +5,6 @@ VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoonlightTVLauncher", "MoonlightTVLauncher\MoonlightTVLauncher.csproj", "{24052D7D-1FC2-4235-8623-9D79A1CE58CB}"
 EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "MoonlightTVAutoConnect", "MoonlightTVAutoConnect\MoonlightTVAutoConnect.pyproj", "{541A0A4E-40EE-4012-945F-05AC2473FC28}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,8 +15,6 @@ Global
 		{24052D7D-1FC2-4235-8623-9D79A1CE58CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24052D7D-1FC2-4235-8623-9D79A1CE58CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24052D7D-1FC2-4235-8623-9D79A1CE58CB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{541A0A4E-40EE-4012-945F-05AC2473FC28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{541A0A4E-40EE-4012-945F-05AC2473FC28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

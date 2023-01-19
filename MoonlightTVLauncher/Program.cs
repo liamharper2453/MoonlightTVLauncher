@@ -4,8 +4,6 @@ using System.Diagnostics;
 using XInputDotNetPure;
 
 var configuration = new Configuration();
-configuration.TvClientKey = configuration.TvClientKey == "" ? "EMPTY" : configuration.TvClientKey;
-
 var periodicTimer = new PeriodicTimer(TimeSpan.FromSeconds(1));
 var moonlightTvStreamActive = false;
 var waitingToWakeFromSleep = false;
@@ -69,9 +67,9 @@ void EndSession()
 {
     RunCommand("/c ares-launch -d tv --close com.limelight.webos");
     RunCommand("/c explorer.exe");
-    RunCommand(@"/c Dependencies/ChangeScreenResolution.exe /w=" + configuration.OriginalResolutionX + "/h=" + configuration.OriginalResolutionY + "/f=" + configuration.OriginalResolutionY  + "/ d=0");
-    RunCommand("/c taskkill /F /IM nvstreamer.exe");
-    RunCommand("/c taskkill /IM Playnite.FullscreenApp.exe");
+    RunCommand(@"/c Dependencies/ChangeScreenResolution.exe /w=" + configuration.OriginalResolutionX + "/h=" + configuration.OriginalResolutionY + "/f=" + configuration.OriginalResolutionHz  + "/ d=0");
+    RunCommand("/c taskkill /F /IM" + configuration.PcApplicationUsedForStreaming);
+    RunCommand("/c taskkill /IM " + configuration.PcApplicationBeingLaunched);
     moonlightTvStreamActive = false;
     //Wait for explorer to start up again before switching back to main desktop
     Thread.Sleep(5000);
@@ -82,7 +80,7 @@ bool StartStream()
 {
     while (Process.GetProcessesByName("nvstreamer").Length == 0)
     {
-        WOL.Wake(configuration.TvMacAddress);
+        WakeOnLan.Wake(configuration.TvMacAddress);
         RunCommand("/c Dependencies/nircmdc sendkeypress rwin+ctrl+right");
         //Wait for desktop to switch BEFORE killing explorer
         Thread.Sleep(1000);
@@ -91,7 +89,7 @@ bool StartStream()
         RunCommand("/c ares-launch -d tv com.limelight.webos");
         //Give TV some time to open the MoonlightTV app before attempting TV input
         Thread.Sleep(3000);
-        RunCommand("/c py MoonlightTVAutoConnect.py" + " " + configuration.TvIpAddress + " " + configuration.TvClientKey + " " + configuration.TvMoonlightGameIndex);
+        RunCommand("/c py Scripts/MoonlightTVAutoConnect.py" + " " + configuration.TvIpAddress + " " + configuration.TvClientKey + " " + configuration.TvMoonlightGameIndex);
     }
 
     if (configuration.TvClientKey == "EMPTY")
