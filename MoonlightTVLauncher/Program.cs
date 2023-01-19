@@ -39,6 +39,7 @@ async Task WaitForConnection()
             {
                 Console.WriteLine("Could not start stream. Please check your settings parameters and try again.");
                 EndSession();
+                Console.Read();
                 Environment.Exit(0);
             }
             else
