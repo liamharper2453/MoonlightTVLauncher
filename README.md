@@ -40,7 +40,7 @@ https://user-images.githubusercontent.com/25060863/213593024-3e326b66-adeb-47ab-
 ## How do I run it?
 You need to first populate the appsettings.json file with values relevant to your setup.
 
-Here is an example of what your appsettings.json should look like when you are done:
+Here is an example of what your appsettings.json should look like when you are done (excluding the comments of course):
 
 ![devenv_LBFy89KKMj](https://user-images.githubusercontent.com/25060863/213511867-8c1f41b1-ec65-43ab-97fb-93d69a5c62d9.png)
 
