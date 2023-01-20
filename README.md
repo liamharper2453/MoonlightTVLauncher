@@ -1,34 +1,44 @@
-
-
-
 # MoonlightTVLauncher
 
-This application allows you to perform the following by simply just turning on your game controller:
+Moonlight TV Launcher allows you to start and stop a Moonlight stream on your TV with only a game controller.
 
- - Conditionally turn on your PC and TV (read FAQ below).
- - Control a WebOS TV and automatically open the Moonlight TV app.
+> This is not at all affiliated with Moonlight or Moonlight TV, this is just a fun side project!
+
+# Features
+
+## Controller on
+
+ - Turn on your PC and TV (read FAQ below).
+ - Control a webOS TV and automatically open the Moonlight TV app.
  - Navigate the Moonlight TV app to select a game/launcher.
  - Start the stream!
 
+https://user-images.githubusercontent.com/25060863/213593229-30248388-b0da-4cb3-8f11-8d23d1722d32.mp4
 
-https://user-images.githubusercontent.com/25060863/213544353-267e855c-49ea-49cf-9d7a-3840a4e5d9e5.mp4
 
-**This is not at all affiliated with Moonlight nor Moonlight TV, this is just a fun side project!**
+## Controller off
+
+ - The Moonlight TV app will be closed and you will be returned back to where the TV was before.
+ - The stream will end.
+ - The host PC will return back to the state it was prior to the stream starting.
+
+https://user-images.githubusercontent.com/25060863/213593024-3e326b66-adeb-47ab-83d7-7f5bc70c74cf.mp4
 
 # How to use
 
 ## What do I need to use this? 
- - A rooted WebOS TV with the Moonlight TV app installed
- - Windows
- - A GameStream server on your PC, for example: Nvidia GameStream
+ - A rooted webOS TV with the Moonlight TV app installed.
+ - A game controller that can connect to your PC.
+ - A Gamestream host on your PC. For example, NVIDIA Gamestream.
  - Python 3
  - [pywebostv](https://pypi.org/project/pywebostv/)
  - [ares-cli](https://www.npmjs.com/package/@webosose/ares-cli)
+ - Windows
 
 ## How do I run it?
 You need to first populate the appsettings.json file with values relevant to your setup.
 
-Here is an example of what you need to put in:
+Here is an example of what your appsettings.json should look like when you are done:
 
 ![devenv_LBFy89KKMj](https://user-images.githubusercontent.com/25060863/213511867-8c1f41b1-ec65-43ab-97fb-93d69a5c62d9.png)
 
@@ -44,7 +54,7 @@ You also probably want to make a second desktop. To do this press Win+CTRL+D (an
 
 After all of that is done, just run the executable. 
 
-What it will do is run in the background and wait for a controller to be turned on. Once it does, it will then activate and start your Moonlight stream. If you turn your controller off, it will close everything and return your PC and TV to the state it was prior to the stream.
+What it will do is run in the background and wait for a controller to be turned on. When this happens, it will then activate and start your Moonlight stream. If you turn your controller off, it will close everything and return your PC and TV to the state it was prior to the stream.
 
 # FAQ's
  
@@ -54,28 +64,28 @@ So my main motivations for this are:
 
  - It's fun!
  - My TV is in my living-room and my PC is upstairs, and I don't have a spare PC to connect to my TV directly.
- - My TV remote is awful and the batteries only last around a day or two. So I thought to myself, wouldn't it be cool if I didn't have to use the remote at all.
+ - My TV remote is awful and the batteries only last around a day or two. So I thought to myself, wouldn't it be cool if I didn't have to use the remote at all?
 
  
 ## **What about if my TV is off?**
 
-Using Wake-on-Lan, this project can turn your TV on!
- (assuming it is on stand-by and not *completely* off)
+Using Wake-on-Lan, this project can turn your TV on! (assuming it is on stand-by and not *completely* off)
 
-If you want this to happen, populate the TvMacAddress setting in appsettings.json.
+If you want this to happen, populate the TvMacAddress setting in appsettings.json. On your TV you should ensure Quick Start+ is enabled.
 
+For me it can take some time for the Wake-on-Lan to start the TV but it should eventually come on.
 
 ## **What about if my PC is off?**
 
-If your PC is in hibernate/sleep, what you can do is go into your Windows power management settings and set your Xbox Wireless Adapter to be able to wake your PC.
+If your PC is in hibernate/sleep, what you can do is go into Device Manager and set your Xbox Wireless Adapter to be able to wake your PC.
 
 ![mmc_rcCqr10yOl](https://user-images.githubusercontent.com/25060863/213506222-58df13db-7979-4e3b-8f84-fa0b7470bf77.gif)
 
-If you combine this with Wake-on-Lan for your TV It means you can start your Moonlight session without any remotes other than your game controller and you don't have to even go and turn your PC on!
+If you combine this with Wake-on-Lan for your TV it means just by turning your game controller on you can start your PC, TV and your Moonlight stream!
 
 # Credits
- - [ares-cli](https://github.com/webosose/ares-cli) for providing the wrapper for the WebOS api's
- -   [ChangeScreenResolution](https://tools.taubenkorb.at/change-screen-resolution/) for creating the tool to be able to programmatically change resolutions
- -  [Moonlight TV](https://github.com/mariotaku/moonlight-tv) for creating the GameStream client
-  - [NirCmd](https://www.nirsoft.net/utils/nircmd2.html) for creating the tool to programmatically send key presses
+ - [ares-cli](https://github.com/webosose/ares-cli) for providing the wrapper for the webOS api's
+ - [ChangeScreenResolution](https://tools.taubenkorb.at/change-screen-resolution/) for creating the tool to be able to programmatically change resolutions
+ - [Moonlight TV](https://github.com/mariotaku/moonlight-tv) for creating the GameStream client
+ - [NirCmd](https://www.nirsoft.net/utils/nircmd2.html) for creating the tool to programmatically send key presses
  - [PyWebOSTV](https://github.com/supersaiyanmode/PyWebOSTV) for creating the tool to pass input remotely to the TV
