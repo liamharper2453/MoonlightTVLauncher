@@ -79,7 +79,7 @@ For me it can take some time for the Wake-on-Lan to start the TV but it should e
 
 ## **What about if my PC is off?**
 
-If your PC is in hibernate/sleep, what you can do is go into your Windows power management settings and set your Xbox Wireless Adapter to be able to wake your PC.
+If your PC is in hibernate/sleep, what you can do is go into Device Manager and set your Xbox Wireless Adapter to be able to wake your PC.
 
 ![mmc_rcCqr10yOl](https://user-images.githubusercontent.com/25060863/213506222-58df13db-7979-4e3b-8f84-fa0b7470bf77.gif)
 
