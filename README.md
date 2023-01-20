@@ -9,7 +9,7 @@ Moonlight TV Launcher allows you to start and stop a Moonlight stream on your TV
 ## Controller on
 
  - Turn on your PC and TV (read FAQ below).
- - Control a WebOS TV and automatically open the Moonlight TV app.
+ - Control a webOS TV and automatically open the Moonlight TV app.
  - Navigate the Moonlight TV app to select a game/launcher.
  - Start the stream!
 
@@ -27,7 +27,7 @@ https://user-images.githubusercontent.com/25060863/213593024-3e326b66-adeb-47ab-
 # How to use
 
 ## What do I need to use this? 
- - A rooted WebOS TV with the Moonlight TV app installed.
+ - A rooted webOS TV with the Moonlight TV app installed.
  - A game controller that can connect to your PC.
  - A GameStream host on your PC. For example, Nvidia GameStream.
  - Python 3
@@ -84,7 +84,7 @@ If your PC is in hibernate/sleep, what you can do is go into your Windows power 
 If you combine this with Wake-on-Lan for your TV it means just by turning your game controller on you can start your PC, TV and your Moonlight stream!
 
 # Credits
- - [ares-cli](https://github.com/webosose/ares-cli) for providing the wrapper for the WebOS api's
+ - [ares-cli](https://github.com/webosose/ares-cli) for providing the wrapper for the webOS api's
  - [ChangeScreenResolution](https://tools.taubenkorb.at/change-screen-resolution/) for creating the tool to be able to programmatically change resolutions
  - [Moonlight TV](https://github.com/mariotaku/moonlight-tv) for creating the GameStream client
  - [NirCmd](https://www.nirsoft.net/utils/nircmd2.html) for creating the tool to programmatically send key presses
