@@ -31,7 +31,7 @@ https://user-images.githubusercontent.com/25060863/213593024-3e326b66-adeb-47ab-
 ## What do I need to use this? 
  - A rooted webOS TV with the Moonlight TV app installed.
  - A game controller that can connect to your PC.
- - A Gamestream host on your PC. For example, Nvidia Gamestream.
+ - A Gamestream host on your PC. For example, NVIDIA Gamestream.
  - Python 3
  - [pywebostv](https://pypi.org/project/pywebostv/)
  - [ares-cli](https://www.npmjs.com/package/@webosose/ares-cli)
