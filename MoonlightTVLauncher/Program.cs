@@ -44,7 +44,7 @@ async Task WaitForConnection()
         {
             if (moonlightTvStreamActive)
             {
-                //Continually hide cursor in bottom left of screen. Many applications like to put it in the middle of your screen when they open!
+                //Continually hide cursor in bottom left of screen. Many applications like to put it in the middle of your screen when they open and they keep it there!
                 DesktopUtilities.SetCursorPos(-1, 9999);
                 continue;
             }
@@ -84,7 +84,8 @@ void RunCommand(string arguments)
 }
 
 void EndSession()
-{
+{   
+    //com.limelight.webos = Moonlight TV
     RunCommand("/c ares-launch -d tv --close com.limelight.webos");
     RunCommand("/c explorer.exe");
     RunCommand("/c \"" + Environment.CurrentDirectory + @"\Dependencies\ChangeScreenResolution.exe" + "\"" + " /w=" + configuration.OriginalResolutionX + " /h=" + configuration.OriginalResolutionY + " /f=" + configuration.OriginalResolutionHz + " /d=0");
@@ -108,8 +109,11 @@ bool StartStream()
         RunCommand("/c \"" + Environment.CurrentDirectory + @"\Dependencies\nircmdc" + "\"" + " sendkeypress rwin+ctrl+right");
         //Wait for desktop to switch BEFORE killing explorer
         Thread.Sleep(1000);
+        //Why do we kill explorer.exe you ask? Because it does not like when resolutions are changed
+        //For me, it always crashes the process and when the process automatically restarts it results in a taskbar overlaying my application that I just opened
         RunCommand("/c taskkill /F /IM explorer.exe");
         RunCommand("/c \"" + Environment.CurrentDirectory + @"\Dependencies\ChangeScreenResolution.exe" + "\"" + " /w=" + configuration.StreamResolutionX + " /h=" + configuration.StreamResolutionY + " /f=" + configuration.StreamResolutionHz + " /d=0");
+        //com.limelight.webos = Moonlight TV
         RunCommand("/c ares-launch -d tv com.limelight.webos");
         //Give TV some time to open the MoonlightTV app before attempting TV input
         Thread.Sleep(3000);
