@@ -1,15 +1,28 @@
 # MoonlightTVLauncher
 
-This application allows you to perform the following by simply just turning on your game controller:
+Moonlight TV Launcher allows you to manage your Moonlight streams on your TV with only a game controller.
+
+> This is not at all affiliated with Moonlight or Moonlight TV, this is just a fun side project!
+
+# Features
+
+### Controller on
 
  - Turn on your PC and TV (read FAQ below).
  - Control a WebOS TV and automatically open the Moonlight TV app.
  - Navigate the Moonlight TV app to select a game/launcher.
  - Start the stream!
 
-https://user-images.githubusercontent.com/25060863/213544353-267e855c-49ea-49cf-9d7a-3840a4e5d9e5.mp4
+https://user-images.githubusercontent.com/25060863/213593229-30248388-b0da-4cb3-8f11-8d23d1722d32.mp4
 
-**This is not at all affiliated with Moonlight nor Moonlight TV, this is just a fun side project!**
+
+## Controller off
+
+ - The Moonlight TV app will be closed and you will be returned back to where the TV was before.
+ - The stream will end.
+ - The host PC will return back to the state it was prior to the stream starting.
+
+https://user-images.githubusercontent.com/25060863/213593024-3e326b66-adeb-47ab-83d7-7f5bc70c74cf.mp4
 
 # How to use
 
