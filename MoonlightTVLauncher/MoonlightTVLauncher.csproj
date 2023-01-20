@@ -5,6 +5,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <ApplicationIcon>MoonlightTVLauncher.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,6 +18,10 @@
       <Isolated>false</Isolated>
       <EmbedInteropTypes>true</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="MoonlightTVLauncher.ico" />
   </ItemGroup>
 
   <ItemGroup>

@@ -2,7 +2,7 @@
 
 namespace MoonlightTVLauncher
 {
-    internal static class DesktopUtilities
+    internal static class InteropUtilities
     {
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         public static extern IntPtr FindWindow(string strClassName, string strWindowName);
