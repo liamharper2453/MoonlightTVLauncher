@@ -27,9 +27,9 @@ https://user-images.githubusercontent.com/25060863/213593024-3e326b66-adeb-47ab-
 # How to use
 
 ## What do I need to use this? 
- - A rooted WebOS TV with the Moonlight TV app installed
- - A game controller that can connect to your PC
- - A GameStream host on your PC, for example: Nvidia GameStream
+ - A rooted WebOS TV with the Moonlight TV app installed.
+ - A game controller that can connect to your PC.
+ - A GameStream host on your PC. For example, Nvidia GameStream.
  - Python 3
  - [pywebostv](https://pypi.org/project/pywebostv/)
  - [ares-cli](https://www.npmjs.com/package/@webosose/ares-cli)
@@ -69,11 +69,11 @@ So my main motivations for this are:
  
 ## **What about if my TV is off?**
 
-Using Wake-on-Lan, this project can turn your TV on!
- (assuming it is on stand-by and not *completely* off)
+Using Wake-on-Lan, this project can turn your TV on! (assuming it is on stand-by and not *completely* off)
 
-If you want this to happen, populate the TvMacAddress setting in appsettings.json.
+If you want this to happen, populate the TvMacAddress setting in appsettings.json. On your TV you should ensure Quick Start+ is enabled.
 
+For me it can take some time for the Wake-on-Lan to start the TV but it should eventually come on.
 
 ## **What about if my PC is off?**
 
@@ -81,7 +81,7 @@ If your PC is in hibernate/sleep, what you can do is go into your Windows power 
 
 ![mmc_rcCqr10yOl](https://user-images.githubusercontent.com/25060863/213506222-58df13db-7979-4e3b-8f84-fa0b7470bf77.gif)
 
-If you combine this with Wake-on-Lan for your TV It means you can start your Moonlight session without any remotes other than your game controller and you don't have to even go and turn your PC on!
+If you combine this with Wake-on-Lan for your TV it means just by turning your game controller on you can start your PC, TV and your Moonlight stream!
 
 # Credits
  - [ares-cli](https://github.com/webosose/ares-cli) for providing the wrapper for the WebOS api's
