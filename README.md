@@ -54,7 +54,7 @@ You also probably want to make a second desktop. To do this press Win+CTRL+D (an
 
 After all of that is done, just run the executable. 
 
-What it will do is run in the background and wait for a controller to be turned on. Once it does, it will then activate and start your Moonlight stream. If you turn your controller off, it will close everything and return your PC and TV to the state it was prior to the stream.
+What it will do is run in the background and wait for a controller to be turned on. When this happens, it will then activate and start your Moonlight stream. If you turn your controller off, it will close everything and return your PC and TV to the state it was prior to the stream.
 
 # FAQ's
  
