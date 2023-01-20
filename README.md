@@ -1,6 +1,6 @@
 # MoonlightTVLauncher
 
-Moonlight TV Launcher allows you to start a Moonlight session on your TV with only a game controller.
+Moonlight TV Launcher allows you to start and stop a Moonlight session on your TV with only a game controller.
 
 > This is not at all affiliated with Moonlight or Moonlight TV, this is just a fun side project!
 
