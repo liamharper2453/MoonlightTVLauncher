@@ -1,5 +1,7 @@
 # MoonlightTVLauncher
 
+![MoonlightTVLauncherLogo](https://user-images.githubusercontent.com/25060863/213676373-e211724d-05f4-4407-824a-693cbdb19bd2.png)
+
 Moonlight TV Launcher allows you to start and stop a Moonlight stream on your TV with only a game controller.
 
 > This is not at all affiliated with Moonlight or Moonlight TV, this is just a fun side project!
