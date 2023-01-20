@@ -6,7 +6,7 @@ Moonlight TV Launcher allows you to start a Moonlight session on your TV with on
 
 # Features
 
-### Controller on
+## Controller on
 
  - Turn on your PC and TV (read FAQ below).
  - Control a WebOS TV and automatically open the Moonlight TV app.
@@ -16,7 +16,7 @@ Moonlight TV Launcher allows you to start a Moonlight session on your TV with on
 https://user-images.githubusercontent.com/25060863/213593229-30248388-b0da-4cb3-8f11-8d23d1722d32.mp4
 
 
-### Controller off
+## Controller off
 
  - The Moonlight TV app will be closed and you will be returned back to where the TV was before.
  - The stream will end.
