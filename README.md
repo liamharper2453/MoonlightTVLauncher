@@ -64,7 +64,7 @@ So my main motivations for this are:
 
  - It's fun!
  - My TV is in my living-room and my PC is upstairs, and I don't have a spare PC to connect to my TV directly.
- - My TV remote is awful and the batteries only last around a day or two. So I thought to myself, wouldn't it be cool if I didn't have to use the remote at all.
+ - My TV remote is awful and the batteries only last around a day or two. So I thought to myself, wouldn't it be cool if I didn't have to use the remote at all?
 
  
 ## **What about if my TV is off?**
