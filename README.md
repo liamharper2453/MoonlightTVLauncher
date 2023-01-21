@@ -52,7 +52,7 @@ For the TvClientKey parameter, you will need to run the included script GetWebOS
 
 ![WindowsTerminal_vd5P0yL2pE](https://user-images.githubusercontent.com/25060863/213506005-7bd970d8-b268-465b-85c4-445162539e14.png)
 
-You also probably want to make a second desktop. To do this press Win+CTRL+D (and then press Win+CTRL+Left to come back).	The reason for this is the application will try and use a different desktop to your main one (as you probably don't want to see what is in the background etc if you are using a game launcher).
+You also probably want to make a second desktop (it's optional). To do this press Win+CTRL+D (and then press Win+CTRL+Left to come back).	The reason for this is the application will try and use a different desktop to your main one (as you probably don't want to see what is in the background etc if you are using a game launcher).
 
 After all of that is done, just run the executable. 
 
@@ -88,6 +88,6 @@ If you combine this with Wake-on-Lan for your TV it means just by turning your g
 # Credits
  - [ares-cli](https://github.com/webosose/ares-cli) for providing the wrapper for the webOS api's
  - [ChangeScreenResolution](https://tools.taubenkorb.at/change-screen-resolution/) for creating the tool to be able to programmatically change resolutions
- - [Moonlight TV](https://github.com/mariotaku/moonlight-tv) for creating the GameStream client
+ - [Moonlight TV](https://github.com/mariotaku/moonlight-tv) for creating the Gamestream client
  - [NirCmd](https://www.nirsoft.net/utils/nircmd2.html) for creating the tool to programmatically send key presses
  - [PyWebOSTV](https://github.com/supersaiyanmode/PyWebOSTV) for creating the tool to pass input remotely to the TV
